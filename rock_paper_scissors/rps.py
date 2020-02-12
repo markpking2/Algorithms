@@ -9,7 +9,7 @@ def rock_paper_scissors(n):
         return [[]]
 
     def rps_helper(arr):
-        if(len(arr[0]) >= n):
+        if(len(arr[0]) == n):
             return arr
         else:
             new_arr = []
