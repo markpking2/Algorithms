@@ -16,7 +16,6 @@ def rock_paper_scissors(n):
                 new_arr.append(arr[i] + ['rock'])
                 new_arr.append(arr[i] + ['paper'])
                 new_arr.append(arr[i] + ['scissors'])
-
             return(rps_helper(new_arr, iter + 1))
     return rps_helper([['rock'], ['paper'], ['scissors']], 1)
 
