@@ -8,8 +8,8 @@ def rock_paper_scissors(n):
     if n == 0:
         return [[]]
 
-    def rps_helper(arr):
-        if(len(arr[0]) == n):
+    def rps_helper(arr, iter):
+        if(iter == n):
             return arr
         else:
             new_arr = []
@@ -18,8 +18,8 @@ def rock_paper_scissors(n):
                 new_arr.append(arr[i] + rps_array[1])
                 new_arr.append(arr[i] + rps_array[2])
 
-            return(rps_helper(new_arr))
-    return rps_helper(rps_array)
+            return(rps_helper(new_arr, iter + 1))
+    return rps_helper(rps_array, 1)
 
 
 if __name__ == "__main__":
